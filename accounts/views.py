@@ -29,6 +29,7 @@ class LoginView(APIView):
 
 class UserDetailView(APIView):
     permission_classes = [IsAuthenticated]
+    print("UserDetailView initialized")
 
     def get(self, request):
         serializer = UserSerializer(request.user)
